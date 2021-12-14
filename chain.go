@@ -18,6 +18,7 @@ import (
 // will see context changes of one and two.
 //
 // While this can be useful in some scenarios, it is generally advisable to use google.golang.org/grpc.ChainUnaryInterceptor directly.
+// 尽管这种方式在很多场景下比较有用，但是还是建议直接使用 grpc.ChainUnaryInterceptor
 func ChainUnaryServer(interceptors ...grpc.UnaryServerInterceptor) grpc.UnaryServerInterceptor {
 	n := len(interceptors)
 
